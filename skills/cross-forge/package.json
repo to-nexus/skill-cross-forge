@@ -1,0 +1,14 @@
+{
+  "name": "cross-forge",
+  "version": "0.4.0",
+  "description": "CROSS Forge driver — token deploy + bonding-curve pool creation per official SKILL.md v2.0.1, plus Phase-1 stubs for trade-side subcommands.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "ethers": "^6.14.3"
+  }
+}

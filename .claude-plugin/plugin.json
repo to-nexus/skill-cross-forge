@@ -1,0 +1,18 @@
+{
+  "name": "cross-forge",
+  "description": "CROSS Forge driver (v0.4, all 8 subcommands working with per-token fee auto-detection) — deploy fungible game/AI-agent tokens, create their bonding-curve pools, browse trending lists, inspect single-token state with recent trades, view per-wallet holdings + Forge-aware annotations, quote / buy / sell on the bonding curve, and read the global activity feed on CROSS Chain (612055). Wraps the official Builder API + Router (0x7aF414e4… ERC1967 proxy) verbatim per https://contents.crosstoken.io/forge/agent-skills/SKILL.md (v2.0.1) for deploy. Trade-side reads Factory (0x78E53A7f…) + per-pair reserves and signs custom-selector swaps (BUY 0xc075a591 native-in / SELL 0x029e384f token-in) with asymmetric fee math (BUY input-side, SELL output-side). v0.4 auto-back-solves the per-token fee bps (e.g. HERO=130 bps, ARA=80 bps) from /api/v1/tokens/<addr>.recent_trades[0] when --fee-bps is not explicit. Read-side hits the Forge bonding-curve API at bonding-curve-api.crosstoken.io for tokens list / token detail / recent feed. Triggers on phrases like 'CROSS Forge token deploy', 'forge launch', 'pump 토큰 발행', 'forge 풀 생성', 'forge bonding curve 매수', 'forge 본딩커브 매도', 'forge token trade', 'list trending forge tokens', 'forge activity feed', '내 forge 포트폴리오', 'x.crosstoken.io/forge'.",
+  "author": {
+    "name": "to-nexus"
+  },
+  "homepage": "https://github.com/to-nexus/skill-cross-forge",
+  "keywords": [
+    "cross-forge",
+    "cross-chain",
+    "token-launch",
+    "bonding-curve",
+    "evm",
+    "builder-api",
+    "verse8",
+    "nexus"
+  ]
+}
