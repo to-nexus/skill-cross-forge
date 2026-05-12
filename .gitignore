@@ -6,3 +6,12 @@ node_modules/
 .DS_Store
 .sessions/
 references/forge.json
+
+# Secrets/session/auth artifacts — NEVER commit (added by security audit)
+.env.local
+.env.*.local
+.auth/
+.auth
+.session/
+*.session
+.tmp/
