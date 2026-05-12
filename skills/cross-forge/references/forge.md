@@ -207,5 +207,4 @@ If upstream publishes a v2.1.x with new constants or new endpoints, re-read it a
 
 - **`cross-explorer`** — read-only Blockscout v2 lookups (block / tx / address / token). If the user only wants "what's the balance of 0x…?", route them there instead of waiting on Phase-1 capture. The Forge UI's number is wrapped in curve-state context, but a raw ERC-20 balance is a one-liner via `cross-explorer`.
 - **`cross-dex-trade`** — Gametoken orderbook (`0x6690…` router) on the **same chain**. Different contract, different liquidity model — its quotes do not apply to Forge bonding curves.
-- **``** — totally separate platform (`/points`), but the Forge UI's "Share & Earn" tab may eventually surface CP rewards. If a captured Forge activity row references `/points/quests/<id>`, route the claim leg through `` rather than re-implementing it here.
 - **`da:token`** (global Davinci skill) — partial overlap with our `deploy`: it calls the same Builder API but does **not** create the pool. Prefer this skill's `deploy` when the user wants the full launch (deploy + pool) in one shot.
