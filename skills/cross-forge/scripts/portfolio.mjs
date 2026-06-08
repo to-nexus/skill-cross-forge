@@ -98,7 +98,7 @@ function humanize(weiStr, decimals) {
 }
 
 main().catch((err) => {
-  if (process.env.DEBUG) process.stderr.write(String(err?.stack || err) + '\n');
+  if (process.env.DEBUG) process.stderr.write(String(err?.message || err) + '\n');
   emit({ ok: false, parsedIntent, error: err?.code || 'unknown_error', message: err?.message || String(err), missing: null, hint: null, signerWarn: null });
   process.exit(err?.exitCode ?? 1);
 });
