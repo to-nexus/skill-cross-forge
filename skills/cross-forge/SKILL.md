@@ -87,6 +87,11 @@ Resolve in this order. **Never echo, never log, never persist.**
 3. `$HOME/.claude/skills/cross-forge/.env`
 4. **Ask the user** — same Option A / Option B framing as cross-shop. Validation: `^0x[0-9a-fA-F]{64}$`.
 
+For personal testing, the default `env` backend reads the key from local
+environment variables or a gitignored `.env` file. For team, hosted-agent, or
+production funds, prefer Vault Transit, KMS, or HSM-backed signing so the raw
+key is not exported to the agent runtime.
+
 `deploy --wallet=user` does NOT need a PK on this side — the unsigned tx is returned for the frontend to sign. `deploy --wallet=tmp` generates a fresh ephemeral wallet *inside the script* (never persisted, owner permissions non-reusable post-deploy).
 
 ---
