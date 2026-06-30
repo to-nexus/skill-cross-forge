@@ -44,7 +44,7 @@ const ROUTER_ABI = [{
   ],
 }];
 
-const VALID_CATEGORIES = ['game', 'ai_agent'];
+const VALID_CATEGORIES = ['game', 'ai_agent', 'streamer'];
 
 function getOption(name) {
   const arg = process.argv.find((a) => a.startsWith(`--${name}=`));
